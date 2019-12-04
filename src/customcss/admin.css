@@ -1,0 +1,31 @@
+.sidenav---sidenav---_2tBP.sidenav---expanded---1KdUL {
+    min-width: 240px;
+    border-top-right-radius: 18% 11%;
+}
+
+.bg-light {
+    height: 58px;
+    background-color: #183661!important;
+}
+
+h1.title {
+    font-size: 99%;
+    font-weight: bold;
+}
+
+h1.titleNav {
+    font-size: 184%;
+    color: white;
+    font-weight: bold;
+}
+
+.sidenav---sidenav---_2tBP {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1006;
+    min-width: 64px;
+    background: #005691;
+    transition: min-width 0.15s;
+}

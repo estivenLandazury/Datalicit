@@ -1,0 +1,44 @@
+h1.result {
+    text-align: initial;
+    font-size: 167%;
+    font-weight: bold;
+}
+
+div#table_scroll {
+    overflow-y: scroll;
+    height: 400px;
+}
+
+h1.numbre {
+    text-align: initial;
+    font-size: 89%;
+    color: #007bff;
+}
+
+h1.filter {
+    font-size: 96%;
+    font-weight: bold;
+    color: #4497f1;
+}
+
+div#table-contain {
+    margin-top: 4%;
+}
+
+
+h1.td {
+    font-size: 70%;
+}
+
+@media only screen and (min-width: 2048px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 1691px;
+    }
+    div#table_scroll {
+        overflow-y: scroll;
+        height: 655px;
+    }
+    h1.td {
+        font-size: 90%
+    }
+}
