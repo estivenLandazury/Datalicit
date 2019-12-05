@@ -1,0 +1,58 @@
+.Image_view {
+    overflow-y: scroll;
+    height: 700px;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    /* Light grey */
+    border-top: 16px solid #3498db;
+    /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+h1.TitleView {
+    color: #183661;
+    font-weight: bold;
+    font-size: 125%;
+    padding-bottom: 4%;
+}
+
+.conten {
+    margin-top: 4%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #183661 !important;
+    border-color: #183661 !important;
+}
+
+input.file {
+    padding-bottom: 5%;
+}
+
+@media only screen and (min-width: 2042px) {
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid #3498db;
+        border-radius: 50%;
+        /* background: red; */
+        margin-left: 46%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

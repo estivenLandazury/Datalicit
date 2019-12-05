@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import '../customcss/home.css'
+import styles from '../customcss/home.css'
 import AWS from 'aws-sdk';
 
 import { portafolio, ref_proceso, url_descarga, entidad, presupuesto, duracion, descripcion } from '../utilities/entites.json';
 import PDFViewer from 'pdf-viewer-reactjs'
 import { Container, Header, Grid, Form } from 'semantic-ui-react';
 import { Document, Page } from 'react-pdf';
+import { $ } from 'jquery'
 class Home extends Component {
 
 
@@ -21,6 +22,7 @@ class Home extends Component {
 
 
             item: "",
+
             portafolio,
             ref_proceso,
             url_descarga,
@@ -30,8 +32,20 @@ class Home extends Component {
             descripcion
 
         }
+
+
+
+        this.handleClick = this.handleClick.bind(this);
+
+
+
     }
 
+    handleClick(event) {
+        this.setState({
+            currentPage: Number(event.target.id)
+        });
+    }
 
 
     filterTable(e) {
@@ -84,7 +98,7 @@ class Home extends Component {
             } else if (this.state.item === "0") {
 
                 for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[0];
+                    td = tr[i].getElementsByTagName("td")[3];
 
 
                     if (td) {
@@ -101,7 +115,7 @@ class Home extends Component {
             } else if (this.state.item === "1") {
 
                 for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[1];
+                    td = tr[i].getElementsByTagName("td")[2];
 
 
                     if (td) {
@@ -132,6 +146,14 @@ class Home extends Component {
     }
 
 
+
+
+
+
+
+
+
+
     dibujarTabla() {
         const list = this.state.portafolio
         const list2 = this.state.descripcion
@@ -140,7 +162,6 @@ class Home extends Component {
         const list5 = this.state.presupuesto
         const list6 = this.state.duracion
         const list7 = this.state.url_descarga
-
 
 
 
@@ -161,9 +182,9 @@ class Home extends Component {
                         <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm"><h1 className="filter"> Filtrar por</h1></label>
                         <div className="col-sm-10">
                             <select id="mi select" className="form-control form-control-sm" onChange={e => this.selectItem(e)}>
-                                <option value="-1"> Please selected </option>
-                                <option value="0"> Reporte </option>
-                                <option value="1"> Refrencia Proceso </option>
+                                <option value="-1"> Portafolio</option>
+                                <option value="0"> Referencia de Proceso</option>
+                                <option value="1"> Entidad </option>
                             </select>
                         </div>
                     </div>                    </div>
@@ -183,31 +204,39 @@ class Home extends Component {
 
 
             <br></br>
+
+
+
+
+
+
+
+
             <div id="table_scroll">
                 <table className="table" id="table" >
-                    <thead className="thead-dark">
+                    <thead >
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Portafolio</th>
-                            <th scope="col">Descripcion</th>
-                            <th scope="col">Entidad</th>
-                            <th scope="col">Ref. Proceso</th>
-                            <th scope="col">Presupuesto</th>
-                            <th scope="col">Duración</th>
-                            <th scope="col">Url descarga</th>
+                            <th scope="col"><h1 className="td1"> #</h1></th>
+                            <th scope="col"><h1 className="td1"> Portafolio</h1></th>
+                            <th scope="col"><h1 className="td1">Descripcion </h1></th>
+                            <th scope="col"><h1 className="td1">Entidad </h1></th>
+                            <th scope="col"><h1 className="td1"> Ref. Proceso</h1></th>
+                            <th scope="col"><h1 className="td1"> Presupuesto</h1></th>
+                            <th scope="col"><h1 className="td1"> Duración</h1></th>
+                            <th scope="col"><h1 className="td1"> Url descarga</h1></th>
                         </tr>
                     </thead>
                     <tbody>
                         {list.map((cand, index) => {
                             return (
                                 <tr key={index}>
-                                    <th scope="row">{index}</th>
+                                    <th scope="row"> <h1 className="td"> {index}</h1></th>
                                     <td contentEditable="true"> <h1 className="td">{cand} </h1></td>
                                     <td> <h1 className="td">{list2[index]} </h1></td>
                                     <td> <h1 className="td">{list3[index]} </h1></td>
-                                    <td>{list4[index]}</td>
-                                    <td>{list5[index]}</td>
-                                    <td>{list6[index]}</td>
+                                    <td> <h1 className="td">{list4[index]}</h1></td>
+                                    <td><h1 className="td"> ${list5[index].replace(".", "")}</h1> </td>
+                                    <td><h1 className="td">{list6[index].replace(".", "")} </h1> </td>
                                     <td> < a href={list7[index]} role="button" > Link</a >
                                     </td>
 
@@ -217,11 +246,18 @@ class Home extends Component {
 
                     </tbody>
                 </table>
+
+
+
+
+
+
+
             </div>
 
 
 
-        </div>
+        </div >
     }
 
 
