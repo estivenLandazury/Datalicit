@@ -213,7 +213,7 @@ class Home extends Component {
 
 
             <div id="table_scroll">
-                <table className="table" id="table" >
+                <table className="table table-hover" id="table" >
                     <thead >
                         <tr>
                             <th scope="col"><h1 className="td1"> #</h1></th>
