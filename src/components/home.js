@@ -237,7 +237,7 @@ class Home extends Component {
                                     <td> <h1 className="td">{list4[index]}</h1></td>
                                     <td><h1 className="td"> ${list5[index].replace(".", "")}</h1> </td>
                                     <td><h1 className="td">{list6[index].replace(".", "")} </h1> </td>
-                                    <td> < a href={list7[index]} role="button" > Link</a >
+                                    <td> < a href={list7[index]} role="button" target="_blank" > Link</a >
                                     </td>
 
                                 </tr>
