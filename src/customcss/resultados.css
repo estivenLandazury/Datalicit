@@ -51,7 +51,7 @@ input.file {
 @media only screen and (max-width: 1326px) {
     .Image_view {
         overflow-y: scroll;
-        height: 565px;
+        height: 358px;
     }
 }
 
