@@ -131,6 +131,25 @@ class Home extends Component {
 
 
             }
+            else if (this.state.item === "2") {
+
+                for (i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[4];
+
+
+                    if (td) {
+                        txValue = td.textContent || td.innerText;
+                        if (txValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none"
+                        }
+                    }
+
+                }
+
+
+            }
 
     }
 
@@ -185,6 +204,8 @@ class Home extends Component {
                                 <option value="-1"> Portafolio</option>
                                 <option value="0"> Referencia de Proceso</option>
                                 <option value="1"> Entidad </option>
+                                <option value="2"> Presupuesto </option>
+
                             </select>
                         </div>
                     </div>                    </div>
@@ -231,7 +252,7 @@ class Home extends Component {
                             return (
                                 <tr key={index}>
                                     <th scope="row"> <h1 className="td"> {index}</h1></th>
-                                    <td contentEditable="true"> <h1 className="td">{cand} </h1></td>
+                                    <td contentEditable="false"> <h1 className="td">{cand} </h1></td>
                                     <td> <h1 className="td">{list2[index]} </h1></td>
                                     <td> <h1 className="td">{list3[index]} </h1></td>
                                     <td> <h1 className="td">{list4[index]}</h1></td>

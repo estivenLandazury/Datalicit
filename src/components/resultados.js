@@ -15,7 +15,7 @@ class Result extends Component {
 
             file: "",
             image: "",
-            URL: "http://172.19.15.11:5005/"
+            URL: "http://172.19.15.20:5005/"
         }
     }
 
