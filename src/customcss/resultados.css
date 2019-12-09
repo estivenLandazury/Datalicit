@@ -48,6 +48,13 @@ input.file {
     }
 }
 
+@media only screen and (min-width: 1326px) {
+    .Image_view {
+        overflow-y: scroll;
+        height: 565px;
+    }
+}
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
