@@ -3,7 +3,7 @@ const stateInitial = {
 
 
     prueba: "Hola mundo",
-    loader: true,
+    loader: false,
     image: ""
     /** Search normal */
 
