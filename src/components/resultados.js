@@ -15,8 +15,8 @@ class Result extends Component {
 
             file: "",
             image: "",
-            /*URL: "http://172.19.15.20:5005/"*/
-            URL: "https://79cc45d2.ngrok.io/"
+            URL: "http://192.168.96.37:5005/"
+            /**URL: "https://79cc45d2.ngrok.io/"*/
         }
     }
 
@@ -180,4 +180,4 @@ const mapDispatchToProps = dispactch => ({
 })
 
 export default connect(mapStateProps, mapDispatchToProps)(Result);
-;
+
