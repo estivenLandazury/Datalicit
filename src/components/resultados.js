@@ -80,7 +80,7 @@ class Result extends Component {
 
     }
 
-
+/** Este método permite mostrar la imagen obtenida  de la petición de sendServer() */
     viewImage() {
         const data = this.props.image
 
