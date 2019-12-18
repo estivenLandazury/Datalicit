@@ -33,7 +33,7 @@ class Result extends Component {
 
 
 
-
+/** Este metodo permite dibujar una imagen que se obtiene a partir nde un archivo de licitaciones  que fue adjuntado en el formulario */
     sendDerver() {
 
         console.log("hola bb")

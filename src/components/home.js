@@ -48,6 +48,9 @@ class Home extends Component {
     }
 
 
+
+    /** Este método permite filtrar la tabla por un campo en específico, el campo debe ser seleccionado anteriormante en la lista desplegable */
+
     filterTable(e) {
 
         var input, filter, table, tr, td, i, txValue
@@ -171,7 +174,7 @@ class Home extends Component {
 
 
 
-
+/** Este método el dibujar la tabla que carga la información  del json que se encuentra el este servidor*/
 
     dibujarTabla() {
         const list = this.state.portafolio
