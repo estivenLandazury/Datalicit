@@ -15,8 +15,8 @@ class Result extends Component {
 
             file: "",
             image: "",
-            URL: "http://192.168.96.37:5005/"
-            /**URL: "https://79cc45d2.ngrok.io/"*/
+            /**  URL: "http://192.168.96.37:5005/"*/
+            URL: "https://08e4b423.ngrok.io/"
         }
     }
 
@@ -33,7 +33,7 @@ class Result extends Component {
 
 
 
-/** Este metodo permite dibujar una imagen que se obtiene a partir nde un archivo de licitaciones  que fue adjuntado en el formulario */
+    /** Este metodo permite dibujar una imagen que se obtiene a partir nde un archivo de licitaciones  que fue adjuntado en el formulario */
     sendDerver() {
 
         console.log("hola bb")
@@ -80,11 +80,11 @@ class Result extends Component {
 
     }
 
-/** Este método permite mostrar la imagen obtenida  de la petición de sendServer() */
+    /** Este método permite mostrar la imagen obtenida  de la petición de sendServer() */
     viewImage() {
         const data = this.props.image
 
-        if (this.props.image!== "") {
+        if (this.props.image !== "") {
 
             return <div className="Image_view">   <img src={`data:image/jpeg;base64,${data}`} /></div>
         } else {
@@ -95,7 +95,7 @@ class Result extends Component {
 
     loader() {
 
-        if (this.props.loader===true) {
+        if (this.props.loader === true) {
 
 
             return <div>
@@ -107,9 +107,9 @@ class Result extends Component {
 
             </div>
 
-        }else if(this.props.loader===false){
+        } else if (this.props.loader === false) {
 
-            return<div> </div>
+            return <div> </div>
         }
     }
 
@@ -168,7 +168,7 @@ const mapDispatchToProps = dispactch => ({
     },
 
 
-    cambiarLoader(e){
+    cambiarLoader(e) {
         dispactch({
             type: "cambiarLoader",
             input: e
